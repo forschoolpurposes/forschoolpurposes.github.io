@@ -17,10 +17,7 @@ h1 {color:black;}
     var secs = mins * 60;
     var currentSeconds = 0;
     var currentMinutes = 0;
-    /* 
-     * The following line has been commented out due to a suggestion left in the comments. The line below it has not been tested. 
-     * setTimeout('Decrement()',1000);
-     */
+    
     setTimeout(Decrement,1000); 
 
     function Decrement() {
@@ -30,6 +27,11 @@ h1 {color:black;}
         secs--;
         document.getElementById("timerText").innerHTML = currentMinutes + ":" + currentSeconds; //Set the element id you need the time put into.
         if(secs !== -1) setTimeout('Decrement()',1000);
+        
+        if (setTimeout == 0) {
+          document.getElementById("timerText").innerHTML = "Время вышло!";
+        }
+        }
     }
 </script>
  
