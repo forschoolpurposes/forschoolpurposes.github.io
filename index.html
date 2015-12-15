@@ -5,9 +5,10 @@
     </title>
   <body>
 <p>я намутила сайтик!</p>
-<span id="timerText"></span>
+<h1><span id="timerText"></span><h1>
  <script>
-  var mins = 10;  //Set the number of minutes you need
+ var time = prompt("На сколько минут поставить таймер?");
+  var mins = time;  //Set the number of minutes you need
     var secs = mins * 60;
     var currentSeconds = 0;
     var currentMinutes = 0;
